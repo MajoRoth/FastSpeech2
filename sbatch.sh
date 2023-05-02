@@ -10,4 +10,6 @@ conda activate venv3.8.10
 
 # pip uninstall -y nvidia_cublas_cu11
 
+export PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python
+
 python3 train.py -p config/LJSpeech/preprocess.yaml -m config/LJSpeech/model.yaml -t config/LJSpeech/train.yaml
