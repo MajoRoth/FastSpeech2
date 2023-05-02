@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --job-name=FastSpeech2-Train
-#SBATCH --time=12-0
+#SBATCH --time=6-0
 #SBATCH --gres=gpu:m60:1
 #SBATCH -c20
 #SBATCH --mem=20g
