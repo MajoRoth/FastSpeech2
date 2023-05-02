@@ -59,8 +59,8 @@ class Preprocessor:
         print("Processing Data ...")
         out = list()
         n_frames = 0
-        pitch_scaler = StandardScaler()
-        energy_scaler = StandardScaler()
+        pitch_scaler = StandardScaler(with_mean=True, with_std=True)
+        energy_scaler = StandardScaler(with_mean=True, with_std=True)
 
         # Compute pitch, energy, duration, and mel-spectrogram
         speakers = {}
@@ -82,12 +82,12 @@ class Preprocessor:
                         info, pitch, energy, n = ret
                     out.append(info)
 
-                if len(pitch) > 0:
-                    pitch_scaler.partial_fit(pitch.reshape((-1, 1)))
-                if len(energy) > 0:
-                    energy_scaler.partial_fit(energy.reshape((-1, 1)))
+                    if len(pitch) > 0:
+                        pitch_scaler.partial_fit(pitch.reshape((-1, 1)))
+                    if len(energy) > 0:
+                        energy_scaler.partial_fit(energy.reshape((-1, 1)))
 
-                n_frames += n
+                    n_frames += n
 
         print("Computing statistic quantities ...")
         # Perform normalization if necessary

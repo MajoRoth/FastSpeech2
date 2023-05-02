@@ -59,7 +59,7 @@ def main(args, configs):
 
     # Training
     step = args.restore_step + 1
-    epoch = 1
+    epoch = 20
     grad_acc_step = train_config["optimizer"]["grad_acc_step"]
     grad_clip_thresh = train_config["optimizer"]["grad_clip_thresh"]
     total_step = train_config["step"]["total_step"]
