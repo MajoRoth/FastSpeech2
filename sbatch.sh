@@ -5,6 +5,8 @@
 #SBATCH --mem=20g
 module load cuda/11.0
 module load cudnn
+
+source /cs/labs/adiyoss/amitroth/anaconda3/etc/profile.d/conda.sh
 conda activate venv3.8.10
 
 # pip uninstall -y nvidia_cublas_cu11
