@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --job-name=FastSpeech2-Train
-#SBATCH --gres=gpu:sm-60:1,vmem:15g
+#SBATCH --gres=gpu:m60:1,vmem:15g
 #SBATCH -c20
 #SBATCH --mem=20g
 module load cuda/11.0
