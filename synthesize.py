@@ -8,7 +8,7 @@ import numpy as np
 from torch.utils.data import DataLoader
 print("trying to import")
 import nltk
-nltk.download('corpora')
+nltk.download('cmudict')
 from g2p_en import G2p
 print("Suceeded")
 from pypinyin import pinyin, Style
